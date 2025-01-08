@@ -13,8 +13,8 @@ Correlation Coefficients for Multivariate Data.
 \tabular{ll}{
 Package: \tab mvcor\cr
 Type: \tab Package\cr
-Version: \tab 1.0 \cr
-Date: \tab 2024-09-12\cr
+Version: \tab 1.1 \cr
+Date: \tab 2025-01-08\cr
 License: \tab GPL-2\cr
 }
 }

@@ -1,6 +1,5 @@
 \name{Distance correlation}
 \alias{dcor}
-\alias{bcdcor}
 \title{
 Distance correlation
 }
@@ -10,8 +9,7 @@ Distance correlation.
 }
 
 \usage{
-dcor(y, x)
-bcdcor(y, x)
+dcor(y, x, bc = FALSE)
 }
 
 \arguments{
@@ -21,33 +19,35 @@ A numerical matrix.
 \item{x}{
 A numerical matrix.
 }
+\item{bc}{
+Do you want the corrected distance correlation? Default value if FALSE.
+}
 }
 
 \details{
-The distance correlation or the bias corrected distance correlation of two matrices is calculated. The latter one
-is used for the hypothesis test that the distance correlation is zero.).
+The distance correlation or the bias corrected distance correlation of two matrices is calculated. The latter one is used for the hypothesis test that the distance correlation is zero.).
 }
 
 \value{
-For the bias corrected distance correlation its value only.
-For the distance correlation a list including:
+A list including:
 \item{dcov}{
-The distance covariance.
+The (bias corrected) distance covariance.
 }
 \item{dvarX}{
-The distance variance of x.
+The (bias corrected) distance variance of x.
 }
 \item{dvarY}{
-The distance variance of Y.
+The (bias corrected) distance variance of Y.
 }
 \item{dcor}{
-The distance correlation.
+The (bias corrected) distance correlation.
 }
 }
 
 \references{
-G.J. Szekely, M.L. Rizzo and N. K. Bakirov (2007). Measuring and Testing Independence
-by Correlation of Distances. Annals of Statistics, 35(6): 2769--2794.
+G.J. Szekely, M.L. Rizzo and N. K. Bakirov (2007). Measuring and Testing Independence by Correlation of Distances. Annals of Statistics, 35(6): 2769--2794.
+
+Szekely G. J. and Rizzo M. L. (2023). The energy of data and distance correlation. Chapman and Hall/CRC.
 }
 
 \author{
@@ -63,6 +63,6 @@ R implementation and documentation: Michail Tsagris <mtsagris@uoc.gr>.
 
 \examples{
 dcor( as.matrix(iris[, 1:2]), as.matrix(iris[, 3:4]) )
-bcdcor( as.matrix(iris[, 1:2]), as.matrix(iris[, 3:4]) )
+dcor( as.matrix(iris[, 1:2]), as.matrix(iris[, 3:4]), bc = TRUE )
 }
 

@@ -1,3 +1,3 @@
-dcor <- function(y, x) {
-  Rfast::dcor(x, y)
+dcor <- function(y, x, bc = FALSE) {
+  Rfast::dcor(x, y, bc = bc)
 }
